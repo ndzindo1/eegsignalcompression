@@ -67,12 +67,14 @@ def izvjestaj():
         print("Vrijednost:" + str(karakter) + ", Kod: " + rjecnikKodova[karakter])
     
     print(" ")
-    print("Broj bita potreban za prikaz nekodirane poruke: " + str(brojBitaOrginalnogSignala))
-    print("Broj bita potreban za prikaz kodirane poruke: " + str(brojBitaKodiranogSignala))
+    print("Broj bita potreban za prikaz nekodiranog signala: " + str(brojBitaOrginalnogSignala))
+    print("Broj bita potreban za prikaz kodiranog signala: " + str(brojBitaKodiranogSignala))
     print("Stepen kompresije iznosi: " + str(brojBitaOrginalnogSignala/brojBitaKodiranogSignala))
     
     if(ulazniSignal == dekodiraniSignal).all():
         print("Ulazni i dekodirani signal su identicni.")
+    else:
+        print("Ulazni i dekodirani signal nisu identicni.")
 
     print('Ulazni signal:', ulazniSignal)
     datoteka = open('kodiraniSignalShannonFano.txt','a+')
